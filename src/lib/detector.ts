@@ -338,7 +338,7 @@ export function detectTechnologies(
   }
 
   // --- Dark mode / Theme detection ---
-  if (/localStorage.*theme|dark.*mode|classList.*dark/i.test(allInlineContent) || /data-theme/i.test(html)) {
+  if (/localStorage\.getItem\(["']theme["']\)|classList\.(?:add|contains)\(["']dark["']\)/i.test(allInlineContent) || /data-theme=["'](?:dark|night)["']/i.test(html)) {
     if (!detected.has("dark-mode")) {
       detected.set("dark-mode", {
         slug: "dark-mode",
@@ -377,7 +377,7 @@ export function detectTechnologies(
   }
 
   // --- Ghost CMS detection ---
-  if (/ghost\.io/i.test(allScriptSrcStr + allLinkHrefStr) || /ghost-/i.test(html) || (metaTags.some(m => m.name === "generator" && /ghost/i.test(m.content)))) {
+  if (/ghost\.io/i.test(allScriptSrcStr + allLinkHrefStr) || (metaTags.some(m => m.name === "generator" && /ghost/i.test(m.content)))) {
     if (!detected.has("ghost")) {
       detected.set("ghost", {
         slug: "ghost",
