@@ -87,6 +87,7 @@ export default function TechPage({
   const [tech, setTech] = useState<Technology | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   useEffect(() => {
     const fetchTech = async () => {
@@ -182,8 +183,19 @@ export default function TechPage({
 
       <div className="glass-card p-8 md:p-12 mb-12">
         <div className="flex items-center gap-4 mb-6">
-          <div className="p-4 bg-zinc-900 rounded-2xl border border-zinc-800 shadow-inner">
-            {getCategoryIcon(tech.category)}
+          <div className="p-4 bg-zinc-900 rounded-2xl border border-zinc-800 shadow-inner flex items-center justify-center w-20 h-20 shrink-0">
+            {!imgError ? (
+              <img
+                src={`https://www.google.com/s2/favicons?domain=${
+                  tech.website_url.replace(/^https?:\/\//, '').split('/')[0]
+                }&sz=256`}
+                alt={`${tech.name} logo`}
+                className="w-12 h-12 object-contain rounded-md"
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              getCategoryIcon(tech.category)
+            )}
           </div>
           <div>
             <h1 className="text-4xl md:text-5xl font-bold font-heading mb-2">

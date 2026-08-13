@@ -48,6 +48,7 @@ export default function AnalyzePage({
   const [loading, setLoading] = useState(true);
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const analyze = async () => {
@@ -214,8 +215,19 @@ export default function AnalyzePage({
                 <div className="glass p-6 rounded-2xl hover:bg-zinc-800/50 transition-colors border hover:border-primary/30 group h-full">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-zinc-900 rounded-lg">
-                        {getCategoryIcon(tech.category)}
+                      <div className="p-2 bg-zinc-900 rounded-lg shrink-0 flex items-center justify-center w-10 h-10">
+                        {!imgErrors[tech.id] ? (
+                          <img
+                            src={`https://www.google.com/s2/favicons?domain=${
+                              tech.website_url.replace(/^https?:\/\//, '').split('/')[0]
+                            }&sz=128`}
+                            alt={`${tech.name} logo`}
+                            className="w-6 h-6 object-contain rounded-sm"
+                            onError={() => setImgErrors((prev) => ({ ...prev, [tech.id]: true }))}
+                          />
+                        ) : (
+                          getCategoryIcon(tech.category)
+                        )}
                       </div>
                       <div>
                         <h3 className="font-bold text-lg group-hover:text-primary transition-colors">
