@@ -118,13 +118,13 @@ export default function AnalyzePage({
         <ArrowLeft className="w-4 h-4" /> Back to Search
       </Link>
 
-      <div className="glass-card p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
+      <div className="glass-card p-6 md:p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 overflow-hidden">
+        <div className="min-w-0 w-full">
           <div className="flex items-center gap-3 mb-2">
-            <Globe className="w-6 h-6 text-primary" />
-            <h1 className="text-3xl font-bold font-heading">{domain}</h1>
+            <Globe className="w-6 h-6 text-primary flex-shrink-0" />
+            <h1 className="text-2xl md:text-3xl font-bold font-heading break-all">{domain}</h1>
             {!loading && result && !error && (
-              <ShieldCheck className="w-5 h-5 text-accent ml-2" />
+              <ShieldCheck className="w-5 h-5 text-accent flex-shrink-0" />
             )}
           </div>
           <p className="text-zinc-400">
