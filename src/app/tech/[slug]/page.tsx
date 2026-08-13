@@ -142,7 +142,30 @@ export default function TechPage({
     }
   };
 
-  const resources = LEARNING_RESOURCES[slug] || [];
+  let resources = LEARNING_RESOURCES[slug] || [];
+
+  if (resources.length === 0 && tech) {
+    resources = [
+      {
+        type: "video",
+        title: `Learn ${tech.name} on YouTube`,
+        url: `https://www.youtube.com/results?search_query=learn+${encodeURIComponent(tech.name)}+tutorial`,
+        author: "YouTube Search",
+      },
+      {
+        type: "course",
+        title: `${tech.name} Courses on Udemy`,
+        url: `https://www.udemy.com/courses/search/?src=ukw&q=${encodeURIComponent(tech.name)}`,
+        author: "Udemy",
+      },
+      {
+        type: "course",
+        title: `${tech.name} Courses on edX`,
+        url: `https://www.edx.org/search?q=${encodeURIComponent(tech.name)}`,
+        author: "edX",
+      },
+    ];
+  }
 
   if (loading) {
     return (
