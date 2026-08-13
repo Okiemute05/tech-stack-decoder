@@ -36,11 +36,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="text-center z-10 max-w-3xl"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border-primary/30 text-primary text-sm font-medium mb-8">
-            <Sparkles className="w-4 h-4" />
-            <span>Discover the tech behind your favorite websites</span>
-          </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Decode the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Web.</span>
           </h1>
