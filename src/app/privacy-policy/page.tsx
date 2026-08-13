@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
         
         <h2 className="text-2xl font-bold text-zinc-100 mt-8 mb-4">1. Information We Collect</h2>
         <p className="text-zinc-300 leading-relaxed mb-6">
-          When you use Tech Stack Decoder, we may collect information that you provide to us directly, such as the URLs you submit for analysis. We also automatically collect standard analytics data including IP addresses, browser types, and usage patterns to improve our service.
+          When you use Teklyze, we may collect information that you provide to us directly, such as the URLs you submit for analysis. We also automatically collect standard analytics data including IP addresses, browser types, and usage patterns to improve our service.
         </p>
 
         <h2 className="text-2xl font-bold text-zinc-100 mt-8 mb-4">2. How We Use Information</h2>

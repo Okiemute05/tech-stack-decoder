@@ -10,7 +10,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Code2 className="w-5 h-5 text-primary" />
               <span className="font-heading font-bold text-lg tracking-tight">
-                Tech Stack Decoder
+                Teklyze
               </span>
             </Link>
             <p className="text-zinc-400 text-sm max-w-sm">
@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-zinc-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-zinc-500">
-          <p>© {new Date().getFullYear()} Tech Stack Decoder. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Teklyze. All rights reserved.</p>
           <p>Built for educational purposes.</p>
         </div>
       </div>

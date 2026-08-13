@@ -15,12 +15,12 @@ export default function TermsOfService() {
         
         <h2 className="text-2xl font-bold text-zinc-100 mt-8 mb-4">1. Acceptance of Terms</h2>
         <p className="text-zinc-300 leading-relaxed mb-6">
-          By accessing and using Tech Stack Decoder, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this service.
+          By accessing and using Teklyze, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this service.
         </p>
 
         <h2 className="text-2xl font-bold text-zinc-100 mt-8 mb-4">2. Use License</h2>
         <p className="text-zinc-300 leading-relaxed mb-6">
-          Permission is granted to temporarily use the materials and analysis tools on Tech Stack Decoder for personal, non-commercial viewing and educational purposes only. You may not:
+          Permission is granted to temporarily use the materials and analysis tools on Teklyze for personal, non-commercial viewing and educational purposes only. You may not:
         </p>
         <ul className="list-disc pl-6 text-zinc-300 mb-6 space-y-2">
           <li>Modify or copy the materials for commercial purposes</li>
@@ -30,7 +30,7 @@ export default function TermsOfService() {
 
         <h2 className="text-2xl font-bold text-zinc-100 mt-8 mb-4">3. Disclaimer</h2>
         <p className="text-zinc-300 leading-relaxed mb-6">
-          The materials on Tech Stack Decoder's web site are provided "as is". We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property.
+          The materials on Teklyze's web site are provided "as is". We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property.
         </p>
 
         <h2 className="text-2xl font-bold text-zinc-100 mt-8 mb-4">4. Accuracy of Materials</h2>

@@ -16,8 +16,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Tech Stack Decoder",
-  description: "Identify and learn the technologies powering any website.",
+  title: "Teklyze — Decode the Tech Behind Any Website",
+  description: "Instantly identify the frameworks, languages, and databases powering any website. Learn how to build it yourself with Teklyze.",
 };
 
 export default function RootLayout({

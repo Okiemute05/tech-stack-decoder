@@ -10,7 +10,7 @@ export default function Header() {
             <Code2 className="w-5 h-5 text-primary" />
           </div>
           <span className="font-heading font-bold text-lg tracking-tight">
-            Tech Stack <span className="text-primary text-glow">Decoder</span>
+            Tek<span className="text-primary text-glow">lyze</span>
           </span>
         </Link>
         
